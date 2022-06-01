@@ -1,0 +1,42 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UserSecretsId>aspnet-siteibs-18BD8B16-3E38-4D91-947F-8E2234A70F05</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Pages\genetrix-details - Copier.cshtml.cs" />
+    <Compile Remove="Pages\NewFolder\Index.cshtml.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="Pages\email.cshtml" />
+    <Content Remove="Pages\genetrix-details - Copier.cshtml" />
+    <Content Remove="Pages\NewFolder\Index.cshtml" />
+    <Content Remove="Pages\Shared\footer.cshtml" />
+    <Content Remove="Pages\Shared\header.cshtml" />
+    <Content Remove="Pages\_Layout.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="3.1.22" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.22" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="3.1.22" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.22" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.22" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Pages\NewFolder\" />
+    <Folder Include="wwwroot\st\images\gallery\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Pages\Shared\_Layout.cshtml" />
+    <None Include="Pages\email.cshtml" />
+    <None Include="Pages\footer.cshtml" />
+    <None Include="Pages\header.cshtml" />
+  </ItemGroup>
+
+</Project>

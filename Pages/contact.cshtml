@@ -1,0 +1,254 @@
+﻿@page
+@model siteibs.Pages.contactModel
+@{
+    ViewData["Title"] = "IBS | Nos contacts";
+}
+
+<span id="titre_page">contact</span>
+
+<!-- Page Title -->
+<section class="page-title" style="background-image: url(@Url.Content("~/st/images/background/contact-background_1920x917.jpg"))">
+    <div class="auto-container">
+        <h1>Contactez-nous</h1>
+        <ul class="page-breadcrumb">
+            <li><a asp-page="Index">Accueil</a></li>
+            <li>Contact</li>
+        </ul>
+    </div>
+</section>
+<!-- End Page Title -->
+<!-- Contact Page Section -->
+<div class="contact-page-section" style="background-image:  @Url.Content("~/st/images/background/pattern-9.png")">
+    <div class="auto-container">
+        <div class="row clearfix">
+
+            <!-- Contact Info Block -->
+            <div class="contact-info-block col-lg-4 col-md-6 col-sm-12">
+                <div class="inner-box">
+                    <div class="color-layer"></div>
+                    <div class="icon-box">
+                        <span class="icon flaticon-phone-call"></span>
+                    </div>
+                    <h6>Nous appeler</h6>
+                    <ul>
+                        <li><span>Fixe : </span><a href="tel:+241 011768606">+241 011768606</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Contact Info Block -->
+            <div class="contact-info-block col-lg-4 col-md-6 col-sm-12">
+                <div class="inner-box">
+                    <div class="color-layer"></div>
+                    <div class="icon-box">
+                        <span class="icon flaticon-big-envelope"></span>
+                    </div>
+                    <h6>Nous écrire</h6>
+                    <ul>
+                        <li><span>Email : </span><a href="mailto:contact@interactivbs.com">contact@interactivbs.com</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Contact Info Block -->
+            <div class="contact-info-block col-lg-4 col-md-6 col-sm-12">
+                <div class="inner-box">
+                    <div class="color-layer"></div>
+                    <div class="icon-box">
+                        <span class="icon flaticon-map"></span>
+                    </div>
+                    <h6>Notre adresse</h6>
+                    <ul>
+                        <li>Lalala - BP 5172 - Libreville</li>
+                    </ul>
+                </div>
+            </div>
+
+            
+
+        </div>
+
+        <!-- Lower Section -->
+        <div class="lower-section">
+            <div class="row clearfix">
+
+                <!-- Content Column -->
+                <div class="content-column col-lg-6 col-md-12 col-sm-12">
+                    <div class="inner-column">
+                        <!-- Sec Title -->
+                        <div class="sec-title">
+                            <div class="title">Entrez en contact avec nous</div>
+                        </div>
+                    </div>
+                    <div class="text"> 
+                        Nous sommes disponibles 24h/24. <br />
+                        Veuillez nous écrire afin de nous communiquer les besoins que vous souhaitez mettre en oeuvre
+                    </div>
+                    <!-- Social Box -->
+                    <ul class="social-box" style="display:none">
+                        <li class="facebook"><a target="_blank" href="http://facebook.com/" class="fa fa-facebook-f"></a></li>
+                        <li class="linkedin"><a target="_blank" href="http://linkedin.com/" class="fa fa-linkedin"></a></li>
+                        <li class="twitter"><a target="_blank" href="http://twitter.com/" class="fa fa-twitter"></a></li>
+                        <li class="instagram"><a target="_blank" href="http://instagram.com/" class="fa fa-instagram"></a></li>
+                    </ul>
+                </div>
+
+                <!-- Form Column -->
+                <div class="form-column col-lg-6 col-md-12 col-sm-12">
+                    <div class="alert-danger" id="alert_msg" style="display:none;" role="alert">
+                        <p id="alert_text"></p>
+                    </div>
+                    <div class="inner-column">
+
+                        <!-- Contact Form -->
+                        <div class="contact-page-form">
+                            <!-- Contact Form -->
+                            <form method="post" asp-action="SendMail" asp-controller="Mail" id="formulaire">
+                                @Html.AntiForgeryToken()
+                                <div class="row clearfix">
+                                    <div class="form-group col-lg-12 col-md-12 col-sm-12">
+                                        <span class="icon flaticon-user-2"></span>
+                                        <input type="text" name="Nom" placeholder="Nom, prénom" required>
+                                    </div>
+
+                                    <div class="form-group col-lg-12 col-md-12 col-sm-12">
+                                        <span class="icon flaticon-big-envelope"></span>
+                                        <input type="email" name="To" placeholder="Email" required>
+                                    </div>
+
+                                    <div class="form-group col-lg-12 col-md-12 col-sm-12">
+                                        <span class="icon flaticon-comment"></span>
+                                        <input type="text" name="Subject" placeholder="Objet" required>
+                                    </div>
+
+                                    <div class="form-group col-lg-12 col-md-12 col-sm-12">
+                                        <span class="icon flaticon-quote-1"></span>
+                                        <textarea id="msgtext" name="Body" placeholder="Message"></textarea>
+                                    </div>
+
+                                    <div class="form-group col-lg-12 col-md-12 col-sm-12">
+                                        <button class="theme-btn" type="submit" name="submit-form">Envoyer <span class="arrow flaticon-right-arrow-1"></span></button>
+                                    </div>
+                                </div>
+                            </form>
+                            <!-- Contact Form -->
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+<!-- End Contact Page Section -->
+<!-- Newsletter Section -->
+<section class="newsletter-section" style="display:none">
+    <div class="auto-container">
+        <div class="content-box">
+            <div class="pattern-layer" style="background-image:  @Url.Content("~/st/images/background/pattern-5.png")"></div>
+            <div class="box-inner">
+                <h3>Inscription à notre newsletter</h3>
+                <div class="text">Inscrivez vous à notre newsletter et recevez les dernières nouvelles. Courriel : Téléphone : Adresse</div>
+                <!-- Emailed Form -->
+                <div class="emailed-form">
+                    <form method="post" action="">
+                        <div class="form-group">
+                            <input type="email" name="email" value="" placeholder="Entrez votre email" required>
+                            <button type="submit" class="theme-btn">S'inscrire</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- Map Outer -->
+        <div class="map-outer">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d805184.6331292129!2d144.49266890254142!3d-37.97123689954809!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad646b5d2ba4df7%3A0x4045675218ccd90!2sMelbourne%20VIC%2C%20Australia!5e0!3m2!1sen!2s!4v1574408946759!5m2!1sen!2s"></iframe>
+        </div>
+    </div>
+</section>
+<!-- End Newsletter Section -->
+<!--Scroll to top-->
+<div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-arrow-up"></span></div>
+@section js{
+    <script>
+	    $(document).ready(function(){
+		    $(".submit-btn").on("click",function(e){
+			    var form = document.getElementById("formulaire");
+                function handleForm(event) { event.preventDefault(); }
+                form.addEventListener('submit', handleForm);
+			    $.ajax({
+			    dataType: 'json',
+			    type:"post",
+			    url:"{% url 'envoi_message' %}",
+			    data:{
+				    "csrfmiddlewaretoken" : "{{  csrf_token  }}",
+				    "username": $("input[name=username]").val(),
+				    "sujet": $("input[name=sujet]").val(),
+				    "email": $("input[name=email]").val(),
+				    "message": $("#msgtext").val()
+			    },
+			    success: function(reponse){
+				    if(reponse["statut"]=="succes"){
+					    if($("#alert_msg").hasClass("alert-danger")){
+						    $("#alert_msg").removeClass("alert-danger");
+					    }else{
+						    if($("#alert_msg").hasClass("alert-warning")){
+							    $("#alert_msg").removeClass("alert-warning");
+						    }
+					    }
+					    $("#alert_msg").addClass("alert-success");
+					    $("#alert_text").text(reponse["reponse"]);
+					    $("#alert_msg").show("slow");
+				    }
+				    if(reponse["statut"]=="warning"){
+					    if($("#alert_msg").hasClass("alert-danger")){
+						    $("#alert_msg").removeClass("alert-danger");
+					    }else{
+						    if($("#alert_msg").hasClass("alert-succes")){
+							    $("#alert_msg").removeClass("alert-succes");
+						    }
+					    }
+					    if(reponse["champ"]=="email_incorrect"){
+						    $("input[name=email]").css("border-color","#ffeeba");
+					    }
+					    if(reponse["champ"] == "username"){
+						    $("input[name=username]").css("border-color","#ffeeba");
+					    }else{
+						    if(reponse["champ"] == "email"){
+							    $("input[name=email]").css("border-color","#ffeeba");
+						    }else{
+							    if(reponse["champ"] == "message"){
+								    $("#msgtext").css("border-color","#ffeeba");
+							    }
+						    }
+					    }
+					    $("#alert_msg").addClass("alert-warning");
+					    $("#alert_text").text(reponse["reponse"]);
+					    $("#alert_msg").show("slow");
+				    }
+				    if(reponse["statut"]=="echec"){
+					    if($("#alert_msg").hasClass("alert-success")){
+						    $("#alert_msg").removeClass("alert-success");
+					    }else{
+						    if($("#alert_msg").hasClass("alert-warning")){
+							    $("#alert_msg").removeClass("alert-warning");
+						    }
+					    }
+					    $("#alert_msg").addClass("alert-danger");
+					    $("#alert_text").text(reponse["reponse"]);
+					    $("#alert_msg").show("slow");
+				    }
+
+			    },
+			    error: function(){
+			    }
+		    });
+		    e.preventDefault();
+		    });
+	    });
+    </script>
+}
+
+

@@ -1,0 +1,363 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Accueil";
+}
+<style>
+    .text {
+        text-align: left !important
+    }
+
+    .lire:hover {
+        background-color: rgb(128, 195, 47, 0.93)
+    }
+
+    .xp {
+        background-color: rgb(128, 195, 47, 0.43);
+        line-height: 1.73em;
+        color: white;
+        padding-left: 20px;
+        border-bottom-left-radius: 25px
+    }
+
+</style>
+<!-- Banner Section -->
+<section class="banner-section">
+    @*<div id="dbp"></div>*@
+    <div class="main-slider-carousel owl-carousel owl-theme">
+        <!--<div class="slide" style="background-image:  @Url.Content("~/st/images/main-slider/image-1.jpg")">
+            <div class="color-layer-one"></div>
+            <div class="color-layer-two" style="background-image:  @Url.Content("~/st/images/main-slider/image-2.jpg")"></div>
+            <div class="auto-container">
+                <div class="row clearfix">-->
+        <!-- Content Column -->
+        <!--<div class="content-column col-lg-6 col-md-12 col-sm-12">
+            <div class="inner-column">
+                <div class="title">Interactiv' Business Services</div>
+                <h1>Editeur <br> <span>de logiciels</span></h1>
+                <div class="text">Nous mettons en place des solutions informatiques pour vous et votre entreprise</div>
+                <div class="btns-box">
+                    <a href="#" class="theme-btn btn-style-one"><span class="txt">Obtenir votre dévis</span></a>
+                    <a asp-page="about" class="theme-btn btn-style-two"><span class="txt">Savoir plus</span></a>
+                </div>
+            </div>
+        </div>-->
+        <!-- Image Column -->
+        <!--<div class="image-column col-lg-6 col-md-12 col-sm-12" style="z-index:0">
+                    <div class="inner-column">
+                        <div class="image">
+                            <img src="@Url.Content("~/st/images/main-slider/content-image-1.png")" alt="" />
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        </div>-->
+
+        <div class="slide" style="background-image:  @Url.Content("~/st/images/main-slider/image-11.jpg")">
+            <div class="color-layer-one"></div>
+            <div class="color-layer-two" style="background-image:  @Url.Content("~/st/images/main-slider/image-21.jpg");"></div>
+            <div class="auto-container">
+                <div class="row clearfix">
+
+                    <!-- Content Column -->
+                    <div class="content-column col-lg-6 col-md-12 col-sm-12" style="background-color:transparent;z-index:20">
+                        <div class="inner-column">
+                            <div class="title">Interactiv' Business Services</div>
+                            <h1>études & Conseils<br> <span>Informatiques</span> </h1>
+                            <div class="text">Nous vous accompagnons dans l'integrations des logiciles. dans votre système d'informations</div>
+                            <div class="btns-box">
+                                <a asp-page="contact" class="theme-btn btn-style-one"><span class="txt">Nous contacter</span></a>
+                                <a asp-page="services" class="theme-btn btn-style-two"><span class="txt">Savoir plus</span></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Image Column -->
+                    <div class="image-column col-lg-6 col-md-12 col-sm-12" style="padding:0px;z-index:10">
+                        <div class="inner-column">
+                            <div class="image">
+                                <img src="@Url.Content("~/st/images/main-slider/content-image-3.png")" alt="" />
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="slide" style="background-image:  @Url.Content("~/st/images/main-slider/image-1.jpg")">
+            <div class="color-layer-one"></div>
+            <div class="color-layer-two" style="background-image:  @Url.Content("~/st/images/main-slider/image-2.jpg")"></div>
+            <div class="auto-container">
+                <div class="row clearfix">
+
+                    <!-- Content Column -->
+                    <div class="content-column col-lg-6 col-md-12 col-sm-12" style="z-index:20">
+                        <div class="inner-column">
+                            <div class="title">Interactiv' Business Services</div>
+                            <h1>Ingénierie <br> <span>Informatique</span></h1>
+                            <div class="text">Nous concevons et developpons des solutions informatiques sur mesure pour le fonctionnement de votre entreprise.</div>
+                            <div class="btns-box">
+                                <a asp-page="contact" class="theme-btn btn-style-one"><span class="txt">Nous contacter</span></a>
+                                <a asp-page="services" class="theme-btn btn-style-two"><span class="txt">Savoir plus</span></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Image Column -->
+                    <div class="image-column col-lg-6 col-md-12 col-sm-12" style="position:relative;z-index:10">
+                        <div class="inner-column">
+                            <div class="image">
+                                <img src="@Url.Content("~/st/images/main-slider/content-image-5.png")" alt="" />
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+<!-- End Banner Section -->
+<!-- About Section -->
+<section class="about-section">
+    <div class="pattern-layer" style="background-image:  @Url.Content("~/st/images/background/pattern-1.png")"></div>
+    <div class="auto-container">
+        <div class="row clearfix">
+            <!-- Image Column -->
+            <div class="image-column col-lg-7 col-md-12 col-sm-12">
+                <div class="inner-column">
+                    <div class="image" style="height:700px;overflow:hidden">
+                        <img src=" @Url.Content("~/st/images/background/responsable1_635x539.png")" style="height:539px;border-bottom-left-radius:30px" alt="" />
+                        <div style="font-size:1.2em;margin-top:-6.91em;position:relative;">
+                            <p class="xp lire">
+                                Nos Conseils et Assistance, Avant et Pendant la Conception et la Mise en Oeuvre de Votre Projet.<br />
+                                Nous Restons Avec Vous pour vous suivre, Bénéficiez d’une Expérience et un Savoir faire de Professionnels.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Content Column -->
+            <div class="content-column col-lg-5 col-md-12 col-sm-12">
+                <div class="inner-column" style="padding-right:30px">
+                    <div class="title">Mot du président</div>
+                    <h2 style="font-size:2.4em"><span>Interactiv' Business Servises </span></h2>
+                    <p>Nous sommes une entreprise d’ingénierie informatique, orientée développement, mettant l’experience utilisateur au centre de nos activités.</p>
+                    <div class="text">Avec nos experts dans l'étude et le développement de solutions numériques, IBS vous accompagne dans la réalisation de vos sites et applications pour une expérience utilisateur innovante et qualitative.. </div>
+
+                    <!-- Fact Counter -->
+                    <div class="fact-counter" style="display:none">
+                        <div class="row clearfix">
+
+                            <!-- Column -->
+                            <div class="column counter-column col-lg-4 col-md-4 col-sm-12">
+                                <div class="inner wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
+                                    <div class="content">
+                                        <div class="icon flaticon-soccer-cup"></div>
+                                        <div class="count-outer count-box">
+                                            <span class="count-text" data-speed="3500" data-stop="1200">0</span>+
+                                        </div>
+                                        <div class="counter-title">Award Winners</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--Column-->
+                            <div class="column counter-column col-lg-4 col-md-4 col-sm-12">
+                                <div class="inner wow fadeInLeft" data-wow-delay="300ms" data-wow-duration="1500ms">
+                                    <div class="content">
+                                        <div class="icon flaticon-flag"></div>
+                                        <div class="count-outer count-box">
+                                            <span class="count-text" data-speed="2500" data-stop="25">0</span>+
+                                        </div>
+                                        <div class="counter-title">Year Experience</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--Column-->
+                            <div class="column counter-column col-lg-4 col-md-4 col-sm-12">
+                                <div class="inner wow fadeInLeft" data-wow-delay="600ms" data-wow-duration="1500ms">
+                                    <div class="content">
+                                        <div class="icon flaticon-book"></div>
+                                        <div class="count-outer count-box">
+                                            <span class="count-text" data-speed="3000" data-stop="1200">0</span>+
+                                        </div>
+                                        <div class="counter-title">Business Guide</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a asp-page="about" class="theme-btn btn-style-two"><span class="txt">À Propos De L’entreprise</span></a>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- End About Section -->
+<!-- Services Section -->
+<section class="services-section">
+    <div class="pattern-layer" style="background-image:  @Url.Content("~/st/images/background/pattern-1.png")"></div>
+    <div class="auto-container">
+        <!-- Sec Title -->
+        <div class="sec-title centered">
+            <div class="title">NOS SERVICES & SOLUTIONS</div>
+            <h2>Nos differnts<span> Services et solutions</span></h2>
+        </div>
+        <div class="row clearfix">
+
+
+            <!-- Service Block -->
+            <div class="service-block col-lg-4 col-md-6 col-sm-12">
+                <div class="inner-box wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
+                    <div class="color-layer">
+                        <span class="side-icon flaticon-line-graph"></span>
+                    </div>
+                    <div class="icon-box">
+                        <span class="icon flaticon-monitor"></span>
+                    </div>
+                    <h4><a href="service-detail.html">Dévéloppement des applications</a></h4>
+                    <div class="text" style="">Nous développons des applications web, mobiles, bureau, APIs et sites internet pour vos beosoins spécifiques. </div>
+                    <a class="arrow" href="service-detail.html"><span class="txt">En savoir plus</span><span class="arrow-icon flaticon-right-arrow-1"></span></a>
+                </div>
+            </div>
+
+            <!-- Service Block -->
+            <div class="service-block col-lg-4 col-md-6 col-sm-12">
+                <div class="inner-box wow fadeInRight" data-wow-delay="0ms" data-wow-duration="1500ms">
+                    <div class="color-layer">
+                        <span class="side-icon flaticon-line-graph"></span>
+                    </div>
+                    <div class="icon-box">
+                        <span class="icon flaticon-books"></span>
+                    </div>
+                    <h4><a href="service-detail.html">Etude & Conseil</a></h4>
+                    <div class="text">Nous pouvons vous accompagner dans tous vos projets et études en informatiques. </div>
+                    <a class="arrow" href="service-detail.html"><span class="txt">En savoir plus</span><span class="arrow-icon flaticon-right-arrow-1"></span></a>
+                </div>
+            </div>
+
+            <!-- Service Block -->
+            <div class="service-block col-lg-4 col-md-6 col-sm-12">
+                <div class="inner-box wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
+                    <div class="color-layer">
+                        <span class="side-icon flaticon-line-graph"></span>
+                    </div>
+                    <div class="icon-box">
+                        <span class="icon flaticon-badge"></span>
+                    </div>
+                    <h4><a asp-page="iApurement_view">Genetrix</a></h4>
+                    <div class="text">Genetrix est une solution intégrée de gestion et de suivi des transferts, des apurements et d'archivage.</div>
+                    <a class="arrow" asp-page="iApurement_view"><span class="txt">En savoir plus</span><span class="arrow-icon flaticon-right-arrow-1"></span></a>
+                </div>
+            </div>
+            <div class="service-block col-lg-4 col-md-6 col-sm-12">
+
+            </div>
+            <!-- Service Block -->
+            <div class="service-block col-lg-4 col-md-6 col-sm-12">
+                <div class="inner-box wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
+                    <div class="color-layer">
+                        <span class="side-icon flaticon-line-graph"></span>
+                    </div>
+                    <div class="icon-box">
+                        <span class="icon flaticon-badge"></span>
+                    </div>
+                    <h4><a href="service-detail.html">Ozangue</a></h4>
+                    <div class="text">Ozangue est une plate-forme web et mobile qui permet de générer les compteurs EDAN. </div>
+                    <a class="arrow" asp-page="genetrix-details"><span class="txt">En savoir plus</span><span class="arrow-icon flaticon-right-arrow-1"></span></a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- End Services Section -->
+<!-- Business Section -->
+<section class="business-section" style="display:none">
+    <div class="auto-container">
+        <!-- Upper Section -->
+        <div class="upper-section">
+            <div class="row clearfix">
+
+                <!-- Content Column -->
+                <div class="content-column col-lg-7 col-md-12 col-sm-12">
+                    <div class="inner-column">
+                        <div class="title">Why Choose Consejo</div>
+                        <h2>Provide <span>Experts</span> For Great <span>Business</span></h2>
+                        <p>Vestibulum ac dictum metus. Nam pretium turpis eget metus consequat rhoncus. Aliquam eu bibendum orci. Mauris vel velit at tortor commodo imperdiet et sit amet tortor. Nam pretium turpis eget metus </p>
+                        <ul class="list-style-one">
+                            <li>Duis consectetur feugiat auctor. Morbi nec enim luctus, feugiat arcu id, ultricies ante.</li>
+                            <li>Morbi nec enim luctus, feugiat arcu id, ultricies ante. Duis vel massa eleifend.</li>
+                            <li>Duis vel massa eleifend, porta est non, feugiat metus.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Image Column -->
+                <div class="image-column col-lg-5 col-md-12 col-sm-12">
+                    <div class="inner-column">
+                        <div class="image titlt" data-tilt data-tilt-max="3">
+                            <img src="@Url.Content("~/st/images/resource/business.jpg")" alt="" />
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Lower Section -->
+        <div class="lower-section">
+            <div class="row clearfix">
+
+                <!-- Service Block Two -->
+                <div class="service-block-two col-lg-3 col-md-6 col-sm-12">
+                    <div class="inner-box wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
+                        <div class="number">01</div>
+                        <h5><a href="service-detail.html">Modify Whole System</a></h5>
+                        <div class="text">By dealing with data, select tools that help you automate time-consuming processes.</div>
+                    </div>
+                </div>
+
+                <!-- Service Block Two -->
+                <div class="service-block-two col-lg-3 col-md-6 col-sm-12">
+                    <div class="inner-box wow fadeInLeft" data-wow-delay="150ms" data-wow-duration="1500ms">
+                        <div class="number">02</div>
+                        <h5><a href="service-detail.html">Safeguard Your Business</a></h5>
+                        <div class="text">By dealing with data, select tools that help you automate time-consuming processes.</div>
+                    </div>
+                </div>
+
+                <!-- Service Block Two -->
+                <div class="service-block-two col-lg-3 col-md-6 col-sm-12">
+                    <div class="inner-box wow fadeInLeft" data-wow-delay="300ms" data-wow-duration="1500ms">
+                        <div class="number">03</div>
+                        <h5><a href="service-detail.html">Beneficial Strategies</a></h5>
+                        <div class="text">By dealing with data, select tools that help you automate time-consuming processes.</div>
+                    </div>
+                </div>
+
+                <!-- Service Block Two -->
+                <div class="service-block-two col-lg-3 col-md-6 col-sm-12">
+                    <div class="inner-box wow fadeInLeft" data-wow-delay="450ms" data-wow-duration="1500ms">
+                        <div class="number">04</div>
+                        <h5><a href="service-detail.html">Solid Human Resource</a></h5>
+                        <div class="text">By dealing with data, select tools that help you automate time-consuming processes.</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</section>
+<!-- End Business Section -->

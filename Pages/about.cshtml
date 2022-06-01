@@ -1,0 +1,221 @@
+﻿@page
+@model siteibs.Pages.aboutModel
+
+@{
+    ViewData["Title"] = "IBS | A propos";
+}
+<style>
+    .case-block{
+        margin-bottom:5em!important;
+    }
+</style>
+<span id="titre_page">about</span>
+<!-- Page Title -->
+<section class="page-title" style="background-image: url(@Url.Content("~/st/images/background/team-background_1920x917.jpg"))">
+    <div>
+        <h1>A propos</h1>
+        <ul class="page-breadcrumb">
+            <li><a asp-page="Index">Accueil</a></li>
+            <li>A propos</li>
+        </ul>
+    </div>
+</section>
+<!-- End Page Title -->
+<!-- About Section -->
+<section class="about-section">
+    <div class="pattern-layer" style="background-image: @Url.Content("~/st/images/background/pattern-1.png")"></div>
+    <div class="auto-container">
+        <div class="card p-3">
+            <div class="content-column1 col-lg-12 col-md-12 col-sm-12">
+                <div class="inner-column1">
+                    @*<div class="title">IBS</div>*@
+                    <h2><span style="color: #dc3545;font-weight:bolder">Interactiv'</span> <span style="color: #351864; font-weight: bolder"> Business </span><span style="color: #ffd800; font-weight: bolder">Services</span></h2>
+                    <h5 style="text-align:justify">
+                        Interactiv’ Business Services « IBS », est une société par actions simplifiées de droit gabonais
+                        au capital social de 4 Millions de FCFA. Nous sommes spécialisés dans la conception,
+                        le développement et le déploiement de solutions informatiques innovantes,
+                        appliquées à la vie économique courante.
+                        <br />Notre mission est d’accompagner les entreprises dans la digitalisation de leur process en vue d’accroître leur efficacité sur leur marché.
+                        <br />Croyant fermement à l’innovation comme vecteur de développement et de croissance, notre objectif à travers nos différents produits, est de permettre à nos clients de reprendre le pouvoir sur toute contrainte (réglementaire, organisationnelle, technologique, etc…) se dressant à eux dans la déclinaison de leur stratégie.
+                    </h5>
+                    <!-- Fact Counter -->
+                    <div class="fact-counter" style="display:none">
+                        <div class="row clearfix">
+
+                            <!-- Column -->
+                            <div class="column counter-column col-lg-4 col-md-4 col-sm-12">
+                                <div class="inner wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
+                                    <div class="content">
+                                        <div class="icon flaticon-soccer-cup"></div>
+                                        <div class="count-outer count-box">
+                                            <span class="count-text" data-speed="3500" data-stop="1200">0</span>+
+                                        </div>
+                                        <div class="counter-title">Award Winners</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--Column-->
+                            <div class="column counter-column col-lg-4 col-md-4 col-sm-12">
+                                <div class="inner wow fadeInLeft" data-wow-delay="300ms" data-wow-duration="1500ms">
+                                    <div class="content">
+                                        <div class="icon flaticon-flag"></div>
+                                        <div class="count-outer count-box">
+                                            <span class="count-text" data-speed="2500" data-stop="25">0</span>+
+                                        </div>
+                                        <div class="counter-title">Year Experience</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--Column-->
+                            <div class="column counter-column col-lg-4 col-md-4 col-sm-12">
+                                <div class="inner wow fadeInLeft" data-wow-delay="600ms" data-wow-duration="1500ms">
+                                    <div class="content">
+                                        <div class="icon flaticon-book"></div>
+                                        <div class="count-outer count-box">
+                                            <span class="count-text" data-speed="3000" data-stop="1200">0</span>+
+                                        </div>
+                                        <div class="counter-title">Business Guide</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br />
+                    <a asp-page="contact" class="theme-btn btn-style-two">Contactez-<span style="text-transform:lowercase!important">nous</span></a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End About Section -->
+
+<!-- Team Section -->
+<section class="team-section style-two" style="display:none">
+    <div class="auto-container">
+        <!-- Sec Title -->
+        <div class="sec-title centered">
+            <div class="title">Notre <span style="text-transform:uppercase">é</span>quipe</div>
+            <h2>Obtenez des services de <span>Nos experts</span></h2>
+        </div>
+        <div class="row clearfix">
+
+            <!-- Team Block -->
+            <div class="team-block col-lg-3 col-md-6 col-sm-12">
+                <div class="inner-box wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
+                    <div class="image">
+                        <img src="@Url.Content("~/st/images/equipe/Marine.jpg")" alt="" />
+                        <!-- Overlay Box -->
+                        <div class="overlay-box">
+                            <div class="overlay-inner">
+                                <div class="content">
+                                    <!-- Social Box -->
+                                    <ul class="social-box">
+                                        <li class="linkedin"><a target="_blank" href="#" title="Voir plus" class="fa fa-eye"></a></li>
+                                        <li class="email"><a target="_blank" href="#" title="Envoyez un mail à Marine BARLOT" class="fa fa-mail-forward"></a></li>
+                                        <li class="phone"><a href="#" title="Contactez Marine BARLOT" class="fa fa-phone"></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lower-content">
+                        <h4><a href="team.html">Marine BARLOT</a></h4>
+                        <div class="designation">
+                            Directeur Général
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Block -->
+            <div class="team-block col-lg-3 col-md-6 col-sm-12">
+                <div class="inner-box wow fadeInRight" data-wow-delay="0ms" data-wow-duration="1500ms">
+                    <div class="image">
+                        <img src="@Url.Content("~/st/images/equipe/Cynthia-Ogouma.jpg")" alt="" />
+                        <!-- Overlay Box -->
+                        <div class="overlay-box">
+                            <div class="overlay-inner">
+                                <div class="content">
+                                    <!-- Social Box -->
+                                    <ul class="social-box">
+                                        <li class="linkedin"><a target="_blank" href="#" title="Voir plus" class="fa fa-eye"></a></li>
+                                        <li class="email"><a target="_blank" href="#" title="Envoyez un mail à Cynthia Ogouma" class="fa fa-mail-forward"></a></li>
+                                        <li class="phone"><a href="#" title="Contactez Cynthia Ogouma" class="fa fa-phone"></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lower-content">
+                        <h4><a href="team.html">Cynthia Ogouma</a></h4>
+                        <div class="designation">Président</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Block -->
+            <div class="team-block col-lg-3 col-md-6 col-sm-12">
+                <div class="inner-box wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
+                    <div class="image">
+                        <img src="@Url.Content("~/st/images/equipe/Leaurame.jpg")" alt="" />
+                        <!-- Overlay Box -->
+                        <div class="overlay-box">
+                            <div class="overlay-inner">
+                                <div class="content">
+                                    <!-- Social Box -->
+                                    <ul class="social-box">
+                                        <li class="linkedin"><a target="_blank" href="#" title="Voir plus" class="fa fa-eye"></a></li>
+                                        <li class="email"><a target="_blank" href="#" title="Envoyez un mail à Leaurame MAKITA" class="fa fa-mail-forward"></a></li>
+                                        <li class="phone"><a href="#" title="Contactez Leaurame MAKITA" class="fa fa-phone"></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lower-content">
+                        <h4><a href="team.html">Leaurame MAKITA</a></h4>
+                        <div class="designation">
+                            Gestionnaire OZANGUE
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Block -->
+            <div class="team-block col-lg-3 col-md-6 col-sm-12">
+                <div class="inner-box wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
+                    <div class="image">
+                        <img src="@Url.Content("~/st/images/equipe/Gael.jpg")" alt="" />
+                        <!-- Overlay Box -->
+                        <div class="overlay-box">
+                            <div class="overlay-inner">
+                                <div class="content">
+                                    <!-- Social Box -->
+                                    <ul class="social-box">
+                                        <li class="linkedin"><a target="_blank" href="#" title="Voir plus" class="fa fa-eye"></a></li>
+                                        <li class="email"><a target="_blank" href="#" title="Envoyez un mail à Gaël BOKO" class="fa fa-mail-forward"></a></li>
+                                        <li class="phone"><a href="#" title="Contactez Gaël BOKO" class="fa fa-phone"></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lower-content">
+                        <h4><a href="team.html">Gaël BOKO</a></h4>
+                        <div class="designation">
+                            Gestionnaire GENETRIX
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- End Team Section -->
+<!--End pagewrapper-->
+<!--Scroll to top-->
+<div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-arrow-up"></span></div>

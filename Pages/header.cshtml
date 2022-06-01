@@ -1,0 +1,248 @@
+<style>
+    .current {
+        text-decoration-line: underline;
+        text-decoration-color: #0094ff;
+        text-underline-offset: 1em;
+        font-weight:bold;
+    }
+    .current a {
+        font-weight: bold;
+    }
+    .bg1 {
+        background-color: #262160!important;
+    }
+
+/* DEMO-SPECIFIC STYLES */
+    #top-text {
+        color: #fff;
+        font-family: monospace;
+        overflow: hidden; /* Ensures the content is not revealed until the animation */
+        border-right: .15em solid orange; /* The typwriter cursor */
+        white-space: nowrap; /* Keeps the content on a single line */
+        margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+        letter-spacing: .15em; /* Adjust as needed */
+        animation: typing 4.5s steps(30, end) infinite, blink-caret .5s step-end infinite;
+    }
+
+/* The typing effect */
+@@keyframes typing {
+  from { width: 0 }
+  to { width: 50% }
+}
+
+/* The typewriter cursor effect */
+@@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange }
+}
+</style>
+
+<header class="main-header header-style-one" style="display:none">
+
+    <!-- Header Top -->
+    <div class="header-top" style="display:none">
+        <div class="auto-container">
+            <div class="clearfix">
+                <!-- Top Left -->
+                <div class="top-left">
+                    <!-- Info List -->
+                    <ul class="info-list">
+                        <li><a href="mailto:info@webmail.com"><span class="icon flaticon-map"></span> Lalala, Libreville, Gabon</a></li>
+                        <li><a href="tel:00241011768606"><span class="icon flaticon-phone-call"></span> +241 011768606</a></li>
+                        <li><a href="mailto:contact@interactivbs.com"><span class="icon flaticon-email"></span> contact@interactivbs.com</a></li>
+                    </ul>
+                </div>
+
+                <!-- Top Right -->
+                <div class="top-right pull-right">
+                    <span class="border-line"></span>
+                    <!--Language-->
+                    <div class="language">
+                        <a class="btn btn-default dropdown-toggle" id="dropdownMenu1" aria-haspopup="true" aria-expanded="true" href="#"><span class="flag-icon"><img src="@Url.Content("~/st/images/icons/flag-icon.jpg")" alt="" class="invisible"></span></a>
+                        <ul class="dropdown-menu style-one" aria-labelledby="dropdownMenu1">
+                            <li><a href="#">English</a></li>
+                            <li><a href="#">German</a></li>
+                            <li><a href="#">Arabic</a></li>
+                            <li><a href="#">Hindi</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!--Header-Upper-->
+    <div class="header-upper">
+        <div class="auto-container clearfix" style="text-align:left">
+
+            <div class="pull-left1 logo-box1" style="float:left!important">
+                <!--~/st/images/logo-2.png-->
+                <div class="logo"><a asp-page="Index"><img src="@Url.Content("~/st/images/IBS_logos.jpg")" style="height:150px" alt="" title=""></a></div>
+            </div>
+
+            <div class="nav-outer clearfix">
+                <!--Mobile Navigation Toggler-->
+                <div class="mobile-nav-toggler"><span class="icon flaticon-menu"></span></div>
+                <!-- Main Menu -->
+                <nav class="main-menu navbar-expand-md">
+                    <div class="navbar-header">
+                        <!-- Toggle Button -->
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+
+                    <div class="navbar-collapse collapse clearfix" id="navbarSupportedContent">
+                        <ul class="navigation clearfix">
+                            <li id="accueil" class="@((string)ViewData["Title"] == "Accueil"?"current":"")"><a asp-page="Index" >Accueil</a></li>
+                            <li id="about" class="@((string)ViewData["Title"] == "IBS | A propos"?"current":"")"><a asp-page="about">A propos</a></li>
+                            <li id="services" class="@((string)ViewData["Title"] == "IBS | Nos services"?"current":"")"><a asp-page="services">Produits</a></li>
+                            <li id="contact" class="@((string)ViewData["Title"] == "IBS | Nos contacts"?"current":"")"><a asp-page="contact" >Contact</a></li>
+                        </ul>
+                    </div>
+                </nav>
+
+            </div>
+
+        </div>
+    </div>
+    <!--End Header Upper-->
+    <!-- Sticky Header  -->
+    <div class="sticky-header">
+        <div class="auto-container clearfix">
+            <!--Logo-->
+            <div class="logo pull-left">
+                <a asp-page="/url" title=""><img src="@Url.Content("~/st/images/IBS_logosmall.png")" alt="" title=""></a>
+            </div>
+            <!--Right Col-->
+            <div class="pull-right">
+                <!-- Main Menu -->
+                <nav class="main-menu">
+                    <!--Keep This Empty / Menu will come through Javascript-->
+                </nav><!-- Main Menu End-->
+
+            </div>
+        </div>
+    </div><!-- End Sticky Menu -->
+    <!-- Mobile Menu  -->
+    <div class="mobile-menu">
+        <div class="menu-backdrop"></div>
+        <div class="close-btn"><span class="icon flaticon-multiply"></span></div>
+
+        <nav class="menu-box">
+            <div class="nav-logo"><a asp-page="/home"><img src="@Url.Content("~/st/images/logo-2.png")" alt="" title=""></a></div>
+            <div class="menu-outer"><!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header--></div>
+        </nav>
+    </div><!-- End Mobile Menu -->
+
+</header>
+
+
+<header class="main-header header-style-three">
+
+    <!-- Header Top Three -->
+    <div class="header-top-three bg1">
+        <div class="auto-container bg1">
+            <div class="inner-container bg1">
+                <div class="clearfix bg1" style="height:50px">
+                    <h5 class="text-center" id="top-text" style="font-size:1.5em;margin-top:-5px">Bienvenue &agrave; Interactiv' Business Services</h5>
+                </div>
+                <div class="" style="display:none">
+                    <!-- Top Left -->
+                    <div class="top-left clearfix">
+                        <!-- Info List -->
+                        <ul class="info-list">
+                            <li><a href="tel:+00-123-456-789"><span class="icon flaticon-phone-call"></span> +00 123 456 789</a></li>
+                            <li><a href="mailto:info@example.com"><span class="icon flaticon-email"></span> info@example.com</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Top Right -->
+                    <div class="top-right pull-right clearfix">
+                        <ul class="page-links" style="display:none">
+                            <li><a href="login.html">Login</a></li>
+                            <li><a href="signup.html">Register</a></li>
+                        </ul>
+                        <!-- Social Nav -->
+                        <ul class="social-nav" style="display:none">
+                            <li><a href="#"><span class="fa fa-facebook-f"></span></a></li>
+                            <li><a href="#"><span class="fa fa-twitter"></span></a></li>
+                            <li><a href="#"><span class="fa fa-google-plus"></span></a></li>
+                            <li><a href="#"><span class="fa fa-linkedin"></span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Header-Upper-->
+    <div class="header-upper">
+        <div class="auto-container clearfix" id="auto-container">
+
+            <div class="pull-left logo-box" style="margin:5px 30px 5px 10px">
+                <div class="logo"><a asp-page="index"><img src="@Url.Content("~/st/images/IBS_logos.jpg")" id="logo1" alt="" title=""></a></div>
+            </div>
+
+            <div class="nav-outer clearfix" id="nav-outer" style="margin-right:70px">
+                <!--Mobile Navigation Toggler-->
+                <div class="mobile-nav-toggler"><span class="icon flaticon-menu"></span></div>
+                <!-- Main Menu -->
+                <nav class="main-menu navbar-expand-md">
+                    <div class="navbar-header">
+                        <!-- Toggle Button -->
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+
+                    <div class="navbar-collapse collapse clearfix" id="navbarSupportedContent" style="margin-top: 20px;float:right">
+                        <ul class="navigation clearfix">
+                            <li id="accueil0" class="@((string)ViewData["Title"] == "Accueil"?"current":"")"><a asp-page="Index">Accueil</a></li>
+                            <li id="about0" class="@((string)ViewData["Title"] == "IBS | A propos"?"current":"")"><a asp-page="about" >A propos</a></li>
+                            <li id="services0" class="@((string)ViewData["Title"] == "IBS | Nos services"?"current":"")"><a asp-page="services" >Nos produits</a></li>
+                            <li id="contact0" class="@((string)ViewData["Title"] == "IBS | Nos contacts"?"current":"")"><a asp-page="contact">Contact</a></li>
+                        </ul>
+                    </div>
+                </nav>
+
+                <!-- Main Menu End-->
+            </div>
+
+        </div>
+    </div>
+    <!--End Header Upper-->
+    <!-- Sticky Header  -->
+    <div class="sticky-header">
+        <div class="auto-container clearfix">
+            <!--Logo-->
+            <div class="logo pull-left">
+                <a asp-page="index" title=""><img src="@Url.Content("~/st/images/IBS_logos_min.jpg")" style="height:100px" alt="" title=""></a>
+            </div>
+            <!--Right Col-->
+            <div class="pull-right">
+                <!-- Main Menu -->
+                <nav class="main-menu">
+                    <!--Keep This Empty / Menu will come through Javascript-->
+                </nav><!-- Main Menu End-->
+               
+            </div>
+        </div>
+    </div><!-- End Sticky Menu -->
+    <!-- Mobile Menu  -->
+    <div class="mobile-menu">
+        <div class="menu-backdrop"></div>
+        <div class="close-btn"><span class="icon flaticon-multiply"></span></div>
+
+        <nav class="menu-box">
+            <div class="nav-logo"><a href="index.html"><img src="@Url.Content("~/st/images/IBS_logos_min.jpg")" style="width:80px;height:80px" alt="" title=""></a></div>
+            <div class="menu-outer"><!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header--></div>
+        </nav>
+    </div><!-- End Mobile Menu -->
+
+</header>

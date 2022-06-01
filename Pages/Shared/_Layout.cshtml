@@ -1,0 +1,132 @@
+@{
+//ViewData["Title"] = "Accueil";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>@ViewData["Title"]</title>
+    <!-- Stylesheets -->
+    <link href="~/st/css/bootstrap.css" rel="stylesheet">
+    <link href="~/st/css/style.css" rel="stylesheet">
+    <link href="~/st/css/responsive.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <link rel="shortcut icon" href="~/st/images/favicon.png" type="image/x-icon">
+    <link rel="icon" href="~/st/images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Responsive -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <style>
+        .header-mobile{
+            display:flex;
+            flex-direction:column;
+        }
+        #titre_page{
+            display:none1;
+        }
+    </style>
+    <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
+    <!--[if lt IE 9]><script src="{% static 'website/js/respond.js"></script><![endif]-->
+
+</head>
+
+<body class="hidden-bar-wrapper">
+
+    <div class="page-wrapper">
+
+        <!-- Preloader -->
+        <div class="preloader"></div>
+        <!-- Main Header-->
+        <partial name="header" />
+        <!-- End Main Header -->
+        @RenderBody()
+        <!--Sponsors Section-->
+        <div style="text-align: center;display:none">
+            <h4 class="title" style="font-weight: bold; background-color: #7484a6; font-size: 2.3em; color: white">Nos partenaires
+                <p>
+                    <i class="fa fa-handshake-o"></i>
+                </p>            
+            </h4>
+        </div>
+        <section class="sponsors-section" style="display:none">
+            <div class="outer-container">
+                <div class="carousel-outer">
+                    <!--Sponsors Slider-->
+                    <ul class="sponsors-carousel owl-carousel owl-theme">
+                        <li><div class="image-box"><a href="#"><img src=" @Url.Content("~/st/images/clients/1.png")" alt=""></a></div></li>
+                        <li><div class="image-box"><a href="#"><img src=" @Url.Content("~/st/images/clients/2.png")" alt=""></a></div></li>
+                        <li><div class="image-box"><a href="#"><img src=" @Url.Content("~/st/images/clients/3.png")" alt=""></a></div></li>
+                        <li><div class="image-box"><a href="#"><img src=" @Url.Content("~/st/images/clients/4.png")" alt=""></a></div></li>
+                        <li><div class="image-box"><a href="#"><img src=" @Url.Content("~/st/images/clients/1.png")" alt=""></a></div></li>
+                        <li><div class="image-box"><a href="#"><img src=" @Url.Content("~/st/images/clients/2.png")" alt=""></a></div></li>
+                        <li><div class="image-box"><a href="#"><img src=" @Url.Content("~/st/images/clients/3.png")" alt=""></a></div></li>
+                        <li><div class="image-box"><a href="#"><img src=" @Url.Content("~/st/images/clients/4.png")" alt=""></a></div></li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+        <!--End Sponsors Section-->
+        <!-- Main Footer -->
+        <partial name="footer" />
+
+    </div>
+    <!--End pagewrapper-->
+    <!-- Search Popup -->
+    <div class="search-popup">
+        <button class="close-search style-two"><span class="flaticon-multiply"></span></button>
+        <button class="close-search"><span class="flaticon-up-arrow"></span></button>
+        <form method="post" action="blog.html">
+            <div class="form-group">
+                <input type="search" name="search-field" value="" placeholder="Search Here" required="">
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </div>
+        </form>
+    </div>
+    <!-- End Header Search -->
+
+    <!--Scroll to top-->
+    <div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-arrow-up"></span></div>
+
+    <script src="~/st/js/jquery.js"></script>
+    <script src="~/st/js/popper.min.js"></script>
+    <script src="~/st/js/bootstrap.min.js"></script>
+    <script src="~/st/js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="~/st/js/jquery.fancybox.js"></script>
+    <script src="~/st/js/appear.js"></script>
+    <script src="~/st/js/parallax.min.js"></script>
+    <script src="~/st/js/tilt.jquery.min.js"></script>
+    <script src="~/st/js/jquery.paroller.min.js"></script>
+    <script src="~/st/js/owl.js"></script>
+    <script src="~/st/js/wow.js"></script>
+    <script src="~/st/js/nav-tool.js"></script>
+    <script src="~/st/js/jquery-ui.js"></script>
+    <script src="~/st/js/script.js"></script>
+
+
+    <script>
+        $(document).ready(function () {
+           
+            $('.logo').click(function () {
+                document.getElementById('link-index').click();
+            });
+            var wp = Number(window.innerWidth);
+            if (wp < 1026) {
+                document.getElementById('auto-container').classList.add('header-mobile');
+                document.getElementById('logo1').style = "height:100px";
+                document.getElementById('nav-outer').style = "margin-top:-80px;display:inline-block";
+            }
+        try {
+            $("#page").addClass("current");
+        } catch (e) {
+
+        }
+	});
+    </script>
+
+    @RenderSection("js",false)
+</body>
+</html>

@@ -1,0 +1,252 @@
+﻿@page
+@model siteibs.Pages.genetrix_detailsModel
+@{
+    ViewData["Title"] = "IBS | Nos services";
+}
+
+<!-- Page Title -->
+<section class="page-title" style="background-image: url(@Url.Content("~/st/images/background/services-background_1920x917.jpg"))">
+    <div class="auto-container">
+        <h1>Détails GENETRIX</h1>
+        <ul class="page-breadcrumb">
+            <li><a asp-page="Index">Accueil</a></li>
+            <li><a asp-page="services">Produits & Services</a></li>
+            <li>Détails GENETRIX</li>
+        </ul>
+    </div>
+</section>
+<!-- End Page Title -->
+<!-- Shop Detail Section -->
+<div class="shop-detail-section">
+    <div class="auto-container">
+        <div class="shop-page">
+            <!--Product Details Section-->
+            <div class="product-details">
+                <!--Basic Details-->
+                <div class="basic-details">
+                    <div class="row clearfix">
+
+                        <div class="image-column col-lg-6 col-md-12 col-sm-12">
+                            <div class="carousel-outer">
+
+                                <ul class="image-carousel owl-carousel owl-theme" style="box-shadow: 5px 5px 15px -7px rgba(0,0,0,0.21) ">
+                                    <li><a href="@Url.Content("~/st/images/produit/genetrix-intetface1-555x504.jpg")" class="lightbox-image" title="Image Caption Here"><img src="@Url.Content("~/st/images/produit/genetrix-intetface1-555x504.jpg")" alt=""></a></li>
+                                    <li><a href="@Url.Content("~/st/images/produit/genetrix-intetface2-555x504.jpg")" class="lightbox-image" title="Image Caption Here"><img src="@Url.Content("~/st/images/produit/genetrix-intetface2-555x504.jpg")" alt=""></a></li>
+                                    @*<li><a href="@Url.Content("~/st/images/produit/genetrix-intetface3-555x504.jpg")" class="lightbox-image" title="Image Caption Here"><img src="@Url.Content("~/st/images/produit/genetrix-intetface3-555x504.jpg")" alt=""></a></li>
+                                    <li><a href="@Url.Content("~/st/images/produit/genetrix-intetface4-555x504.jpg")" title="Image Caption Here"><img src="@Url.Content("~/st/images/produit/genetrix-intetface4-555x504.jpg")" alt=""></a></li>
+                                    <li><a href="@Url.Content("~/st/images/produit/genetrix-intetface5-555x504.jpg")" title="Image Caption Here"><img src="@Url.Content("~/st/images/produit/genetrix-intetface5-555x504.jpg")" alt=""></a></li>
+                                    <li><a href="@Url.Content("~/st/images/produit/genetrix-intetface6-555x504.jpg")" class="lightbox-image" title="Image Caption Here"><img src="@Url.Content("~/st/images/produit/genetrix-intetface6-555x504.jpg")" alt=""></a></li>
+                                    <li><a href="@Url.Content("~/st/images/produit/genetrix-intetface7-555x504.jpg")" class="lightbox-image" title="Image Caption Here"><img src="@Url.Content("~/st/images/produit/genetrix-intetface7-555x504.jpg")" alt=""></a></li>*@
+                                </ul>
+
+                                <ul class="thumbs-carousel owl-carousel owl-theme">
+                                    <li><img src="@Url.Content("~/st/images/produit/genetrix-intetface1-138x138.jpg")" alt=""></li>
+                                    <li><img src="@Url.Content("~/st/images/produit/genetrix-intetface2-138x138.jpg")" alt=""></li>
+                                    @*<li><img src="@Url.Content("~/st/images/produit/genetrix-intetface3-138x138.jpg")" alt=""></li>
+                                    <li><img src="@Url.Content("~/st/images/produit/genetrix-intetface4-138x138.jpg")" alt=""></li>
+                                    <li><img src="@Url.Content("~/st/images/produit/genetrix-intetface5-138x138.jpg")" alt=""></li>
+                                    <li><img src="@Url.Content("~/st/images/produit/genetrix-intetface6-138x138.jpg")" alt=""></li>
+                                    <li><img src="@Url.Content("~/st/images/produit/genetrix-intetface7-138x138.jpg")" alt=""></li>*@
+                                </ul>
+
+                            </div>
+
+                        </div>
+
+                        <!--Info Column-->
+                        <div class="info-column col-lg-6 col-md-12 col-sm-12">
+                            <div class="details-header">
+                                <h3><img src="@Url.Content("~/st/images/background/genetrix.png")" alt="" /></h3>
+                                <div class="rating"><span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="light fa fa-star"></span></div>
+                                <!--reviews-->
+                                <div class="reviews">
+                                    <a href="#">4.5</a> <a href="#">(1 customer review)</a>
+                                </div>
+                            </div>
+                            <div class="text">
+                                Genetrix est une solution intégrée de gestion et de suivi des transferts, des apurements et d'archivage.
+                                <div class="text">
+                                    Elle offre plusieures fonctionalités parmi lesquelles :
+                                    <ol style="margin-left:10px">
+                                        <li>
+                                            <span class="bull">&bull;</span> Suivi des opérations en temps réel
+                                        </li>
+                                        <li>
+                                            <span class="bull">&bull;</span> Emission de courriers automatisés à
+                                            l’attention de la BEAC
+                                        </li>
+                                        <li>
+                                            <span class="bull">&bull;</span> Espace Tchat pour les besoins
+                                            en support technique.
+                                        </li>
+                                        <li>
+                                            <span class="bull">&bull;</span> E-pub pour la promotion des produits
+                                        </li>
+                                    </ol>
+                                </div>
+                            </div>
+                           
+
+                            <div class="other-options">
+                                <div class="clearfix">
+                                    <div class="pull-left">
+                                        <div class="item-title">&nbsp;</div>
+                                        <!--Btns Box-->
+                                        <div class="btns-box clearfix">
+                                            <ul class="cart-options" id="aime-pan">
+                                                <li><a id="aime" href="#aime-pan"><span class="icon fa fa-heart"></span></a></li>
+                                                <li><a href="#aime-pan"><span class="icon fa fa-newspaper-o"></span></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!--Basic Details-->
+            </div>
+        </div>
+
+        <!-- Product Info Tabs -->
+        <div class="product-info-tabs">
+            <!-- Product Tabs -->
+            <div class="prod-tabs tabs-box">
+
+                <!--Tab Btns-->
+                <ul class="tab-btns tab-buttons clearfix">
+                    <li data-tab="#prod-details" class="tab-btn active-btn">Description</li>
+                    <li data-tab="#prod-info" class="tab-btn">Autre Information</li>
+                    <li data-tab="#prod-reviews" class="tab-btn">Commentaire (0)</li>
+                </ul>
+
+                <!--Tabs Container-->
+                <div class="tabs-content">
+
+                    <!-- Tab / Active Tab -->
+                    <div class="tab active-tab" id="prod-details">
+                        <div class="content">
+                            <p>Description du produit...</p>
+                        </div>
+                    </div>
+
+                    <!-- Tab -->
+                    <div class="tab" id="prod-info">
+                        <div class="content">
+                            <p>Autre information sur le produit...</p>
+                        </div>
+                    </div>
+
+                    <!-- Tab -->
+                    <div class="tab" id="prod-reviews">
+                        <div class="content">
+                            <h3>Review (1)</h3>
+
+                            <div class="shop-comment-box">
+                                <div class="shop-comment">
+                                    <div class="author-thumb"><img src="images/resource/author-5.jpg" alt=""></div>
+                                    <div class="comment-info clearfix"><strong>Reema Choz</strong><div class="comment-time">March 3, 2021 10:59 am</div></div>
+                                    <div class="text">Morbi velit eros, sagittis in facilisis non, rhoncus et erat. Nam posuere tristique sem, eu ultricies tortor imperdiet vitae. Curabitur lacinia neque non metus Donec tempus convallis tincidunt. Nulla condimentum, magna sit amet placerat placerat.</div>
+                                    <ul class="comment-option">
+                                        <li><a href="#"><span class="icon flaticon-heart"></span>90 Likes</a></li>
+                                        <li><a href="#"><span class="icon fa fa-reply-all"></span>Reply</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <h3>Laissez nous votre propre avis</h3>
+                            <!-- Rating -->
+                            <div class="rating">
+                                <label>Ou notez le produit</label>
+                                <a href="#" class="rate-box" title="5 Out of 5"><span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span></a>
+                            </div>
+
+                            <!-- Shop Comment Form -->
+                            <div class="shop-comment-form">
+                                <form method="post" action="blog.html">
+                                    <div class="row clearfix">
+
+                                        <div class="form-group col-lg-6 col-md-6 col-sm-12">
+                                            <span class="icon flaticon-user-2"></span>
+                                            <input type="text" name="username" placeholder="Nom" required>
+                                        </div>
+
+                                        <div class="form-group col-lg-6 col-md-6 col-sm-12">
+                                            <span class="icon flaticon-big-envelope"></span>
+                                            <input type="email" name="email" placeholder="Email" required>
+                                        </div>
+
+                                        <div class="form-group col-lg-12 col-md-12 col-sm-12">
+                                            <span class="icon flaticon-message"></span>
+                                            <textarea name="message" placeholder="Votre avis"></textarea>
+                                        </div>
+
+                                        <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12" style="display:none">
+                                            <div class="check-box"><input type="checkbox" name="shipping-option" id="account-option"> &ensp; <label for="account-option">Save my name, email, and website in this browser for the next time I Review.</label></div>
+                                        </div>
+
+                                        <div class="form-group col-lg-12 col-md-12 col-sm-12">
+                                            <button class="theme-btn submit-btn" type="submit" name="submit-form">Postez votre avis <span class="arrow flaticon-right-arrow-1"></span></button>
+                                        </div>
+
+                                    </div>
+                                </form>
+                                <!-- Comment Form -->
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<!-- End Shop Detail Section -->
+<!-- Related Shop Section -->
+<div class="related-shop-section" style="display:none">
+    <div class="auto-container">
+        <!-- Sec Title -->
+        <div class="sec-title centered">
+            <div class="title">Autres produits</div>
+            @*<h2>Related Products</h2>*@
+        </div>
+        <div class="row clearfix">
+            <div class="shop-item col-lg-4 col-md-4 col-sm-12">
+
+            </div>
+            <!--Shop Item-->
+            <div class="shop-item col-lg-4 col-md-4 col-sm-12">
+                <div class="inner-box">
+                    <div class="image">
+                        <img src="images/resource/products/10.jpg" alt="" />
+                        <div class="overlay-box">
+                            <ul class="cart-option">
+                                <li><a href="images/resource/products/10.jpg" class="lightbox-image" data-fancybox-group="shop-gallery" data-caption=""><span class="flaticon-search"></span></a></li>
+                                <li><a href="#"><span class="flaticon-eye"></span></a></li>
+                                <li><a href="#"><span class="flaticon-heart-1"></span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="lower-content">
+                        <h6><a href="shop-single.html">OZANGUE</a></h6>
+                        <div class="price">Application électrique</div>
+                        <!--Rating-->
+                        <div class="rating">
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star-o"></span>
+                        </div>
+                        <a class="cart-btn" href="#"><span class="icon flaticon-eye"></span>Voir plus</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- End Related Shop Section -->
